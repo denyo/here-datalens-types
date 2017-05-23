@@ -37,7 +37,7 @@ declare namespace H {
              * @param onError {function(Error)=} - Callback called on an unsuccessful request with the Error object
              * @returns {Promise<any>} - Response Promise
              */
-            request(method: string, endpoint: string, params?: any, body?: any, onResult?: () => void, onError?: () => void): Promise<any>;
+            request(method: string, endpoint: string, params?: any, body?: any, onResult?: (result: any) => void, onError?: (error: any) => void): Promise<any>;
 
             /**
              * This method fetches query data for a given query ID.
@@ -49,7 +49,7 @@ declare namespace H {
              * @param onError {function(Error)=} - Callback called on an unsuccessful request with the Error object
              * @returns {Promise<any>} - Response Promise
              */
-            fetchQueryData(queryId: string, params?: any, onResult?: () => void, onError?: () => void): Promise<any>;
+            fetchQueryData(queryId: string, params?: any, onResult?: (result: any) => void, onError?: (error: any) => void): Promise<any>;
 
             /**
              * This method fetches statistical data for the Data Lens query (eg minimum and maximum values for the query metric).
@@ -60,7 +60,7 @@ declare namespace H {
              * @param onError {function(Error)=} - Callback called on an unsuccessful request with the Error object
              * @returns {Promise<any>} - Response Promise
              */
-            fetchQueryStats(queryId: string, statsQuery: any, onResult?: () => void, onError?: () => void): Promise<any>;
+            fetchQueryStats(queryId: string, statsQuery: any, onResult?: (result: any) => void, onError?: (error: any) => void): Promise<any>;
 
             /**
              * This method fetches a layer of geometries (eg buildings or administrative boundaries).
@@ -70,7 +70,7 @@ declare namespace H {
              * @param onError {function(Error)=} - Callback called on an unsuccessful request with the Error object
              * @returns {Promise<any>} - Response Promise
              */
-            fetchLayer(layerName: string, params?: any, onResult?: () => void, onError?: () => void): Promise<any>;
+            fetchLayer(layerName: string, params?: any, onResult?: (result: any) => void, onError?: (error: any) => void): Promise<any>;
 
             /**
              * This method fetches vector tile data from the layer.
@@ -84,7 +84,7 @@ declare namespace H {
              * @returns {Promise<Uint8Array>} - Typed array with tile data
              */
             fetchLayerTile(layerName: string, x: H.datalens.QueryTileProvider.X, y: H.datalens.QueryTileProvider.Y, z: H.datalens.QueryTileProvider.Zoom,
-                           params?: any, onResult?: () => void, onError?: () => void): Promise<Uint8Array>;
+                           params?: any, onResult?: (result: any) => void, onError?: (error: any) => void): Promise<Uint8Array>;
 
             /**
              * Sets the access and refresh tokens used to authenticate all requests against the Data Lens REST API.
