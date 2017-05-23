@@ -1,4 +1,4 @@
-// Type definitions for HERE Data Lens API for JavaScript
+// Type definitions for HERE Data Lens API for JavaScript v2.3.0-31
 // Project: https://developer.here.com/
 // Definitions by: Bernd Hacker <https://github.com/denyo>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
