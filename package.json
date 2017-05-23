@@ -1,0 +1,28 @@
+{
+  "name": "@types/heredatalens",
+  "version": "1.0.0",
+  "description": "TypeScript definitions for HERE Data Lens API for JavaScript",
+  "author": {
+    "name": "Bernd Hacker",
+    "email": "https://github.com/denyo/"
+  },
+  "dependencies": {
+    "@types/heremaps": "*"
+  },
+  "devDependencies": {
+    "dtslint": "^0.1.2",
+    "object.entries": "^1.0.4"
+  },
+  "directories": {},
+  "license": "MIT",
+  "main": "",
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denyo/here-datalens-types"
+  },
+  "scripts": {
+    "dtslint": "dtslint types"
+  }
+}
